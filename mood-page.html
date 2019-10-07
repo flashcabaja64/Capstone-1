@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Moods</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="mood-page.css">
+</head>
+
+<body>
+<nav role="navigation">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mood-collect.html">My Moods</a></li>
+        <li><a href="mood-page.html">New Mood</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul>
+</nav>
+<main role="main">
+    <header>
+    <h1>New Mood</h1>
+    </header>
+    <section>
+    <form id="record-mood">
+        <div class="form-section">
+        <label for="mood-title">Current Mood</label>
+        <input type="text" name="mood-title" placeholder="Feeling weird" required>
+        </div>
+        <div class="form-section">
+        <label for="mood-summary">Why am I feeling this way?</label>
+        <textarea name="mood-summary" rows="15"   required></textarea>
+        </div>
+        <div class="time-mood-container" class="form-section">
+        <label for="time-mood">How long did the mood last?</label>
+        <input type="number" name="mood-time" placeholder="8">
+        </div>
+        <div class="form-section">
+        <p>Select mood range</p>
+
+        <input type="radio" name="mood-type" value="0" class="mood-type-radio" checked>
+        <label for="mood-type">
+            <span>Balanced</span>
+            <div class="mood-type-explanation">This is a stable conditional mood people experience in a typical day. Things are balanced, and moods are not spiking high, and steeping low.</div>
+        </label>
+
+        <input type="radio" name="mood-type" value="1" class="mood-type-radio">
+        <label for="mood-type">
+            <span>Low</span>
+            <div class="mood-type-explanation">Mood likes this has people unmotivated, and only wanting to get through the day with the least amount of effort. This could range from depressive to sad thoughts.</div>
+        </label>
+
+        <input type="radio" name="mood-type" value="2" class="mood-type-radio">
+        <label for="mood-type">
+            <span>Extreme</span>
+            <div class="mood-type-explanation">When there is a rush of emotions that feels overpowering to where the person can still feel in control.</div>
+        </label>
+
+        <input type="radio" name="mood-type" value="3" class="mood-type-radio">
+        <label for="mood-type">
+            <span>Erratic</span>
+            <div class="mood-type-explanation">Unable to manage the state of mood, and could, at any time, result in making regrettable and unforseen situations.</div>
+        </label>
+
+        <input type="radio" name="mood-type" value="4" class="mood-type-radio">
+        <label for="mood-type">
+            <span>Unsure</span>
+            <div class="mood-type-explanation">Sometimes moods cannot be labeled and we are unsure the exact mood we are experiencing. Try your best to describe it.</div>
+        </label>
+        </div>
+
+        <div class="form-section">
+            <p class="mood-date-header">Date of Mood</p>
+            <input type="number" name="date-month" placeholder="01" min="1" max="12" required=""> .
+            <input type="number" name="date-day" class="date-day"  placeholder="01" min="1" max="31" required=""> .
+            <input type="number" name="date-year" class="date-year" placeholder="2019" min="2019" max="2020" required="">
+        </div>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    </section>
+</main>
+</body>
+
+</html>
